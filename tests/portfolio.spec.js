@@ -26,11 +26,13 @@ test("all chapters open through the inventory and shelf", async ({ page }) => {
   await expect(page.locator("#previous-chapter")).toBeDisabled();
   await page.locator("#next-chapter").click();
   await expect(page.locator("#panel-ueber-mich")).toBeVisible();
-  await expect(page.locator("#contact-links a")).toHaveCount(1);
-  await expect(page.locator("#contact-links a")).toHaveAttribute(
-    "href",
-    "https://github.com/aedn-sama",
-  );
+  await expect(page.locator("#contact-links a")).toHaveCount(2);
+  await expect(
+    page.getByRole("link", { name: /LinkedIn/, includeHidden: true }),
+  ).toHaveAttribute("href", "https://www.linkedin.com/in/adrian-thaqi-ob1w4n");
+  await expect(
+    page.getByRole("link", { name: /GitHub/, includeHidden: true }),
+  ).toHaveAttribute("href", "https://github.com/aedn-sama");
   expect(errors).toEqual([]);
 });
 

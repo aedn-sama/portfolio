@@ -67,14 +67,12 @@ function selectChapter(
   if (updateHash) history.pushState(null, "", `#${chapter.id}`);
   if (focusTab) tabs[index].focus({ preventScroll: true });
   if (scroll)
-    document
-      .getElementById("profile")
-      .scrollIntoView({
-        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-          ? "instant"
-          : "smooth",
-        block: "start",
-      });
+    document.getElementById("profile").scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+      block: "start",
+    });
   if (sound) playClick();
 }
 
@@ -158,15 +156,9 @@ soundToggle.addEventListener("click", () => {
 
 const contacts = [
   {
-    label: "E-Mail",
-    value: profile.email,
-    href: profile.email ? `mailto:${profile.email}` : "",
-    placeholder: "E-Mail-Adresse folgt",
-  },
-  {
-    label: "LinkedIn / XING",
-    value: profile.linkedin || profile.xing,
-    href: profile.linkedin || profile.xing,
+    label: "LinkedIn",
+    value: profile.linkedin,
+    href: profile.linkedin,
     placeholder: "Profil-Link folgt",
   },
   {
@@ -181,11 +173,7 @@ contacts.forEach((contact) => {
   let url;
   try {
     const parsed = new URL(contact.href);
-    if (
-      parsed.protocol === "https:" ||
-      (contact.label === "E-Mail" && parsed.protocol === "mailto:")
-    )
-      url = parsed.href;
+    if (parsed.protocol === "https:") url = parsed.href;
   } catch {
     /* Missing contact information is displayed without a dead link. */
   }
@@ -193,10 +181,8 @@ contacts.forEach((contact) => {
   item.className = `contact-item${url ? " link" : ""}`;
   if (url) {
     item.href = url;
-    if (!url.startsWith("mailto:")) {
-      item.target = "_blank";
-      item.rel = "noopener noreferrer";
-    }
+    item.target = "_blank";
+    item.rel = "noopener noreferrer";
   }
   const title = document.createElement("strong");
   title.textContent = `${contact.label}${url ? " ↗" : ""}`;
@@ -208,13 +194,6 @@ contacts.forEach((contact) => {
   item.append(title, detail);
   contactRoot.append(item);
 });
-document.getElementById("contact-note").textContent = contacts.some(
-  (contact) => !contact.href,
-)
-  ? "Weitere Kontaktmöglichkeiten werden ergänzt. Mein GitHub-Profil ist bereits verlinkt."
-  : "";
-if (profile.name)
-  document.getElementById("footer-name").textContent = profile.name;
 try {
   const sourceUrl = new URL(profile.repository);
   if (sourceUrl.protocol === "https:")
@@ -222,4 +201,3 @@ try {
 } catch {
   /* Retain the original repository link if the custom value is invalid. */
 }
-document.getElementById("year").textContent = new Date().getFullYear();

@@ -21,7 +21,7 @@ Der Build schreibt ausschließlich die öffentlichen Website-Dateien nach `dist/
 ## Inhalte anpassen
 
 - `index.html`: deutsche Texte und fünf Rubriken.
-- `profile.js`: öffentlicher Anzeigename, E-Mail-Adresse, LinkedIn/XING und GitHub. Leere Kontaktfelder erzeugen sichtbare Hinweise statt ungültiger Links. Vor einer vollständigen Veröffentlichung E-Mail und berufliches Profil ergänzen.
+- `profile.js`: öffentliche Links zu LinkedIn, GitHub und dem Quellcode-Repository. Leere Kontaktfelder erzeugen sichtbare Hinweise statt ungültiger Links.
 - `styles.css`: Farben, Pixel-Optik und responsive Layouts.
 - `assets/bookshelf.png`: generierte Bücherregal-Szene; Entstehung und Prompt siehe `assets/IMAGE-PROMPT.md`.
 
@@ -53,4 +53,4 @@ npm test
 
 Die Browser-Tests prüfen Rubrikenwechsel, direkte Links, Verlauf, Tastatur, optionale Soundsteuerung, vier Viewport-Größen und die Darstellung ohne JavaScript. Screenshots liegen nach dem Test in `test-results/` und werden nicht eingecheckt.
 
-Die Schrift VT323 wird unter der SIL Open Font License verwendet, siehe `assets/fonts/OFL.txt`. Inoffizielles Minecraft-Fanprojekt; keine Verbindung zu Mojang oder Microsoft.
+Die Schrift VT323 wird unter der SIL Open Font License verwendet, siehe `assets/fonts/OFL.txt`.
