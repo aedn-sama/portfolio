@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171612" />
+    <meta
+      name="description"
+      content="Senior Backend Software Developer. SAP ABAP, TypeScript, Rust und Cloud-Infrastrukturen – entdecke mein Profil in einem interaktiven Minecraft-Inventar."
+    />
+    <title>Dev Inventory · Senior Backend Software Developer</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="./assets/fonts/vt323.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#profile">Zum Profil springen</a>
+    <header class="site-header page-width">
+      <a class="brand" href="#" aria-label="Dev Inventory Startseite"
+        ><img src="./assets/favicon.svg" alt="" width="32" height="32" /><span
+          >dev<span class="brand-dot">.</span>inventory</span
+        ></a
+      >
+      <nav aria-label="Hauptnavigation">
+        <a href="#library" class="library-link">Die Bibliothek</a
+        ><a href="#kontakt" class="header-contact"
+          >Kontakt aufnehmen <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <button
+        id="sound-toggle"
+        class="sound-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Sound einschalten"
+      >
+        <span id="sound-icon" aria-hidden="true">♫</span
+        ><span id="sound-label">Sound aus</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="intro page-width" aria-labelledby="hero-heading">
+        <p class="eyebrow">
+          <span class="tiny-square" aria-hidden="true"></span> PERSÖNLICHES
+          PORTFOLIO <span class="eyebrow-separator">/</span> BACKEND ENGINEERING
+        </p>
+        <h1 id="hero-heading">
+          Gute Systeme.<br /><span>Block für Block.</span>
+        </h1>
+        <p class="role">Senior Backend Software Developer</p>
+        <p class="intro-description">
+          Skalierbare Systemmigrationen, durchdachte Enterprise-Architekturen<br
+            class="desktop-break"
+          />
+          und performante Cloud-Infrastrukturen. Willkommen in meiner Welt.
+        </p>
+        <a class="explore-link" href="#library"
+          >Inventar entdecken <span aria-hidden="true">↓</span></a
+        >
+        <span class="intro-coordinate" aria-hidden="true"
+          >X: 01 &nbsp; Y: 64 &nbsp; Z: 05</span
+        >
+      </section>
+
+      <section
+        id="library"
+        class="library page-width"
+        aria-labelledby="library-title"
+      >
+        <div class="library-heading">
+          <h2 id="library-title">
+            <span aria-hidden="true">▤</span> Die Bibliothek
+          </h2>
+          <span>5 Bücher. Ein Profil.</span>
+        </div>
+        <div class="shelf-frame">
+          <img
+            class="shelf-image"
+            src="./assets/bookshelf.png"
+            alt="Gemütliche Minecraft-Bibliothek mit Fackellicht und genau fünf Büchern in Rot, Blau, Grün, Lila und Braun, nummeriert von 1 bis 5."
+            width="1672"
+            height="941"
+            fetchpriority="high"
+          />
+          <div class="scene-label">
+            <span aria-hidden="true">✦</span> BUILT WITH CURIOSITY
+          </div>
+          <div class="scene-mode">
+            <span aria-hidden="true">◆</span> Survival Base
+          </div>
+          <div class="book-hotspots" aria-label="Bücher im Regal">
+            <a
+              href="#einstieg"
+              class="book-hotspot book-one"
+              data-chapter="einstieg"
+              aria-label="Buch 1 öffnen: Einstieg"
+              ><span>01 · Einstieg <span aria-hidden="true">↗</span></span></a
+            >
+            <a
+              href="#ueber-mich"
+              class="book-hotspot book-two"
+              data-chapter="ueber-mich"
+              aria-label="Buch 2 öffnen: Über mich"
+              ><span>02 · Über mich <span aria-hidden="true">↗</span></span></a
+            >
+            <a
+              href="#tech-stack"
+              class="book-hotspot book-three"
+              data-chapter="tech-stack"
+              aria-label="Buch 3 öffnen: Tech Stack"
+              ><span
+                >03 · Tech Stack <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              href="#profil"
+              class="book-hotspot book-four"
+              data-chapter="profil"
+              aria-label="Buch 4 öffnen: Stärken und Schwächen"
+              ><span
+                >04 · Stärken & Schwächen
+                <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              href="#kontakt"
+              class="book-hotspot book-five"
+              data-chapter="kontakt"
+              aria-label="Buch 5 öffnen: Kontakt"
+              ><span>05 · Kontakt <span aria-hidden="true">↗</span></span></a
+            >
+          </div>
+          <p class="shelf-hint">
+            <span aria-hidden="true">◇</span> Jedes Buch erzählt ein Kapitel.
+          </p>
+        </div>
+
+        <div class="inventory-wrap">
+          <div class="inventory-heading">
+            <span>Dein Inventar</span
+            ><span class="inventory-help"
+              >BUCH WÄHLEN <span aria-hidden="true">·</span> <kbd>1</kbd>–<kbd
+                >5</kbd
+              ></span
+            >
+          </div>
+          <div class="inventory" role="tablist" aria-label="Portfolio-Rubriken">
+            <button
+              id="tab-einstieg"
+              class="slot"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-einstieg"
+              data-chapter="einstieg"
+              tabindex="0"
+            >
+              <span class="pixel-book red" aria-hidden="true"><i></i></span
+              ><span class="slot-number">1</span
+              ><span class="slot-tooltip">Einstieg</span>
+            </button>
+            <button
+              id="tab-ueber-mich"
+              class="slot"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-ueber-mich"
+              data-chapter="ueber-mich"
+              tabindex="-1"
+            >
+              <span class="pixel-book blue" aria-hidden="true"><i></i></span
+              ><span class="slot-number">2</span
+              ><span class="slot-tooltip">Über mich</span>
+            </button>
+            <button
+              id="tab-tech-stack"
+              class="slot"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-tech-stack"
+              data-chapter="tech-stack"
+              tabindex="-1"
+            >
+              <span class="pixel-book green" aria-hidden="true"><i></i></span
+              ><span class="slot-number">3</span
+              ><span class="slot-tooltip">Tech Stack</span>
+            </button>
+            <button
+              id="tab-profil"
+              class="slot"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-profil"
+              data-chapter="profil"
+              tabindex="-1"
+            >
+              <span class="pixel-book purple" aria-hidden="true"><i></i></span
+              ><span class="slot-number">4</span
+              ><span class="slot-tooltip">Stärken & Schwächen</span>
+            </button>
+            <button
+              id="tab-kontakt"
+              class="slot"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-kontakt"
+              data-chapter="kontakt"
+              tabindex="-1"
+            >
+              <span class="pixel-book brown" aria-hidden="true"><i></i></span
+              ><span class="slot-number">5</span
+              ><span class="slot-tooltip">Kontakt</span>
+            </button>
+            <span
+              class="slot empty"
+              role="presentation"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="slot empty"
+              role="presentation"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="slot empty"
+              role="presentation"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="slot empty"
+              role="presentation"
+              aria-hidden="true"
+            ></span>
+          </div>
+          <p class="inventory-caption">
+            Ein Klick auf ein Buch öffnet das passende Kapitel.
+          </p>
+        </div>
+      </section>
+
+      <section id="profile" class="profile page-width" aria-label="Mein Profil">
+        <div class="chapter-bar">
+          <span
+            ><span class="chapter-dot" aria-hidden="true"></span>
+            <span id="chapter-label">BUCH 01 / 05</span></span
+          ><span id="chapter-category">DER EINSTIEG</span>
+        </div>
+        <article
+          id="panel-einstieg"
+          class="chapter"
+          role="tabpanel"
+          aria-labelledby="tab-einstieg"
+          tabindex="0"
+        >
+          <div class="chapter-layout">
+            <div class="chapter-main">
+              <p class="section-kicker">HALLO, WELT.</p>
+              <h2>Komplexe Systeme.<br />Klare Lösungen.</h2>
+              <p class="lead">
+                Ich entwickle Backends, die mit ihren Aufgaben wachsen. Und
+                bringe gewachsene Systeme sicher in die nächste Generation.
+              </p>
+              <p>
+                Als erfahrener Softwareentwickler verbinde ich tiefgreifende
+                Expertise in SAP ABAP mit modernen Web-Technologien wie
+                TypeScript, Rust und Node.js. Mein Fokus: komplexe
+                Legacy-Systeme in modulare Microservices transformieren,
+                Geschäftsprozesse automatisieren und E-Invoicing
+                standardisieren.
+              </p>
+              <a class="pixel-button" href="#ueber-mich"
+                >Mehr über mich <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <aside class="character-sheet">
+              <p class="sheet-heading">
+                <span aria-hidden="true">⚒</span> Entwickler-Profil
+              </p>
+              <dl>
+                <div>
+                  <dt>KLASSE</dt>
+                  <dd>Backend Developer</dd>
+                </div>
+                <div>
+                  <dt>LEVEL</dt>
+                  <dd>Senior</dd>
+                </div>
+                <div>
+                  <dt>SPIELSTIL</dt>
+                  <dd>Analytisch & zielorientiert</dd>
+                </div>
+                <div>
+                  <dt>UMGEBUNG</dt>
+                  <dd>Remote & verteilt</dd>
+                </div>
+              </dl>
+              <div class="sheet-footer">
+                <span class="status-dot" aria-hidden="true"></span> Saubere
+                Architektur als Kompass.
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article
+          id="panel-ueber-mich"
+          class="chapter"
+          role="tabpanel"
+          aria-labelledby="tab-ueber-mich"
+          tabindex="0"
+          hidden
+        >
+          <p class="section-kicker">DER MENSCH HINTER DEM CODE.</p>
+          <h2>Mit Überblick.<br />Und Liebe zum Detail.</h2>
+          <p class="lead">
+            Als Softwareentwickler verbinde ich strategisches Systemverständnis
+            mit technischer Umsetzungstiefe.
+          </p>
+          <p class="text-width">
+            Mein Schwerpunkt liegt auf der stabilen und zukunftssicheren
+            Weiterentwicklung gewachsener Systemlandschaften. Ich schätze klare
+            Prozesse, saubere Architekturen und logische Problemlösungen. Dabei
+            arbeite ich strukturiert, analytisch und eigenverantwortlich – auch
+            in remote und verteilten Teams.
+          </p>
+          <dl class="fact-grid">
+            <div>
+              <dt><span aria-hidden="true">⌘</span> Fokus</dt>
+              <dd>
+                Backend-Engineering<br />Systemmigration<br />Enterprise-Integration
+              </dd>
+            </div>
+            <div>
+              <dt><span aria-hidden="true">▦</span> Arbeitsweise</dt>
+              <dd>Strukturiert<br />Analytisch<br />Eigenverantwortlich</dd>
+            </div>
+            <div>
+              <dt><span aria-hidden="true">⌂</span> Umgebung</dt>
+              <dd>Remote-erfahren<br />Linux-affin<br />Containerisiert</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article
+          id="panel-tech-stack"
+          class="chapter"
+          role="tabpanel"
+          aria-labelledby="tab-tech-stack"
+          tabindex="0"
+          hidden
+        >
+          <p class="section-kicker">DIE RICHTIGEN WERKZEUGE.</p>
+          <h2>Mein Tech-Inventar.</h2>
+          <p class="lead">
+            Von SAP bis Rust. Von gewachsenen Geschäftsprozessen bis zur Cloud.
+          </p>
+          <div class="stack-grid">
+            <section class="stack-group">
+              <span class="stack-index">01</span>
+              <h3>Backends & APIs</h3>
+              <div class="tags">
+                <span>TypeScript</span><span>Node.js</span><span>Express</span
+                ><span>NestJS</span><span>Rust</span><span>Tokio</span
+                ><span>Axum</span><span>SAP ABAP</span>
+              </div>
+              <p>
+                SAP: Dynpro, IDoc, SD/FI-CA sowie E-Invoicing mit XRechnung und
+                Peppol.
+              </p>
+            </section>
+            <section class="stack-group">
+              <span class="stack-index">02</span>
+              <h3>Datenbanken & ORM</h3>
+              <div class="tags">
+                <span>PostgreSQL</span><span>TypeORM</span><span>DataGrip</span>
+              </div>
+              <p>
+                Strukturierte Datenhaltung und Integration in performante
+                Backend-Systeme.
+              </p>
+            </section>
+            <section class="stack-group">
+              <span class="stack-index">03</span>
+              <h3>Infrastruktur & DevOps</h3>
+              <div class="tags">
+                <span>Docker Compose</span><span>Linux</span><span>AWS</span
+                ><span>Caddy</span><span>GitHub Actions</span
+                ><span>Jenkins</span>
+              </div>
+              <p>
+                Ubuntu, Fedora, Alpine · AWS S3, API Gateway, DynamoDB und CDK ·
+                CI/CD.
+              </p>
+            </section>
+            <section class="stack-group">
+              <span class="stack-index">04</span>
+              <h3>Tools & IDEs</h3>
+              <div class="tags">
+                <span>Cursor</span><span>VS Code</span><span>Zed</span
+                ><span>Git</span>
+              </div>
+              <p>Ein fokussierter Werkzeugkasten für den Entwicklungsalltag.</p>
+            </section>
+          </div>
+        </article>
+
+        <article
+          id="panel-profil"
+          class="chapter"
+          role="tabpanel"
+          aria-labelledby="tab-profil"
+          tabindex="0"
+          hidden
+        >
+          <p class="section-kicker">EIN EHRLICHER BLICK.</p>
+          <h2>Stärken kennen.<br />Weiter wachsen.</h2>
+          <p class="lead">
+            Gute Entwicklung beginnt auch beim eigenen Arbeitsstil.
+          </p>
+          <div class="reflection-grid">
+            <section>
+              <h3>
+                <span class="positive" aria-hidden="true">+</span> Was mich
+                auszeichnet
+              </h3>
+              <ul class="reflection-list">
+                <li>
+                  <h4>Analytische Tiefe</h4>
+                  <p>
+                    Ich durchdringe komplexe Codebasen und logische
+                    Abhängigkeiten in Altsystemen schnell.
+                  </p>
+                </li>
+                <li>
+                  <h4>Pragmatische Zielorientierung</h4>
+                  <p>
+                    Effiziente, stabile und wartbare Implementierungen stehen
+                    für mich vor unnötiger Komplexität.
+                  </p>
+                </li>
+                <li>
+                  <h4>Autonomie</h4>
+                  <p>
+                    Ich übernehme Verantwortung für Konzeption, Umsetzung und
+                    Fehlerbehebung technischer Aufgaben.
+                  </p>
+                </li>
+                <li>
+                  <h4>Technische Adaptionsfähigkeit</h4>
+                  <p>
+                    Ich arbeite mich schnell in neue Sprachen, Frameworks und
+                    Architekturparadigmen ein.
+                  </p>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h3>
+                <span class="growth" aria-hidden="true">↗</span> Woran ich
+                arbeite
+              </h3>
+              <ul class="reflection-list">
+                <li>
+                  <h4>Perfektionismus bei Detailfragen</h4>
+                  <p>
+                    Architektur und Refactoring können mich bis in Randaspekte
+                    beschäftigen. Deshalb setze ich bewusst auf pragmatische
+                    Meilensteine.
+                  </p>
+                </li>
+                <li>
+                  <h4>Klare Prozesse einfordern</h4>
+                  <p>
+                    Unpräzise Anforderungen und unstrukturierte Prozesse können
+                    zu Beginn Reibung erzeugen. Ich arbeite daran, klare
+                    Absprachen früh und konstruktiv zu schaffen.
+                  </p>
+                </li>
+              </ul>
+              <p class="reflection-note">
+                Immer in Entwicklung. Auch außerhalb der Codebase.
+              </p>
+            </section>
+          </div>
+        </article>
+
+        <article
+          id="panel-kontakt"
+          class="chapter"
+          role="tabpanel"
+          aria-labelledby="tab-kontakt"
+          tabindex="0"
+          hidden
+        >
+          <p class="section-kicker">DAS NÄCHSTE KAPITEL.</p>
+          <h2>Zusammen etwas<br />Solides bauen.</h2>
+          <p class="lead">
+            Eine komplexe Migration, eine Backend-Frage oder eine gute Idee?
+            Lass uns ins Gespräch kommen.
+          </p>
+          <div id="contact-links" class="contact-links"></div>
+          <p id="contact-note" class="contact-note"></p>
+        </article>
+        <div class="chapter-navigation">
+          <button id="previous-chapter" type="button" disabled>
+            <span aria-hidden="true">←</span> Voriges Buch</button
+          ><span id="reading-progress">01 <span>/ 05</span></span
+          ><button id="next-chapter" type="button">
+            Nächstes Buch <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+      <p class="closing-line page-width">
+        <span aria-hidden="true">✦</span> Durchdacht gebaut. Bis zum letzten
+        Block.
+      </p>
+    </main>
+
+    <footer class="site-footer page-width">
+      <p>
+        © <span id="year">2026</span>
+        <span id="footer-name">Dev Inventory</span
+        ><span class="footer-divider">/</span> Mit Code & Neugier gebaut.
+      </p>
+      <div>
+        <a
+          id="source-link"
+          href="https://github.com/aedn-sama/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Quellcode <span aria-hidden="true">↗</span></a
+        ><span class="footer-note">Inoffizielles Minecraft-Fanprojekt.</span>
+      </div>
+    </footer>
+    <noscript
+      ><div class="no-js-note">
+        Alle fünf Rubriken sind sichtbar. Die interaktive Inventarleiste
+        benötigt JavaScript.
+        <a
+          href="https://github.com/aedn-sama"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Mein GitHub-Profil ↗</a
+        >
+      </div>
+      <style>
+        .chapter[hidden] {
+          display: block !important;
+        }
+        .chapter {
+          border-bottom: 1px solid #4c4131;
+        }
+        .chapter-navigation,
+        .sound-toggle,
+        .book-hotspots {
+          display: none !important;
+        }
+      </style></noscript
+    >
+  </body>
+</html>
